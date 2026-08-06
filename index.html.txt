@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Happy Birthday Manjeet ❤️</title>
+<style>
+body{margin:0;font-family:Arial;background:linear-gradient(#12001f,#30004d);color:#fff;text-align:center;overflow-x:hidden}
+.screen{display:none;min-height:100vh;padding:30px;align-items:center;justify-content:center;flex-direction:column}
+.active{display:flex}
+input,button{padding:12px 18px;border-radius:8px;border:none;margin:8px}
+button{cursor:pointer}
+#hearts span{position:fixed;bottom:-20px;color:#ff6fae;animation:f 8s linear infinite;font-size:22px}
+@keyframes f{to{transform:translateY(-110vh)}}
+.balloon{display:inline-block;width:90px;height:110px;background:#ff5c8a;border-radius:50%;line-height:110px;margin:10px;cursor:pointer}
+img{width:180px;height:220px;object-fit:cover;margin:8px;border-radius:12px;background:#fff2}
+</style>
+</head>
+<body>
+<div id="login" class="screen active">
+<h1>🔐 Secret Birthday Surprise</h1>
+<input id="pw" type="password" placeholder="Enter Password">
+<button onclick="check()">Open</button>
+<p id="err"></p>
+</div>
+
+<div id="main" class="screen">
+<div id="hearts"></div>
+<h1>🎉 Happy Birthday Manjeet Lamba ❤️</h1>
+<h2>From Your Gulgule 💖</h2>
+<p>You are my happiest place. May your life always be filled with love, success and smiles.</p>
+<h3>Are you excited?</h3>
+<div><button onclick="showBalloons()">Yes ❤️</button><button id="no">No 😅</button></div>
+</div>
+<div id="cake" style="display:none">
+<h2>🎂 Make a Wish</h2>
+<button onclick="blow()">Blow Candle 🕯️</button>
+</div>
+<div id="letter" style="display:none">
+<h2>💌 My Letter</h2>
+<p>Dear Manjeet,<br><br>Thank you for being part of my life. I wish you endless happiness. Happy Birthday, my love! ❤️<br><br>Forever Yours,<br><b>Gulgule</b></p>
+<h2>📸 Our Memories</h2>
+<img src="images/photo1.jpg"><img src="images/photo2.jpg"><img src="images/photo3.jpg"><img src="images/photo4.jpg"><br>
+<img src="images/photo5.jpg"><img src="images/photo6.jpg"><img src="images/photo7.jpg"><img src="images/photo8.jpg">
+<p>Replace these image files with your own photos.</p>
+</div>
+</div>
+<script>
+for(let i=0;i<40;i++){let s=document.createElement('span');s.innerHTML='❤';s.style.left=Math.random()*100+'vw';s.style.animationDelay=Math.random()*8+'s';document.getElementById('hearts').appendChild(s);}
+function check(){if(document.getElementById('pw').value==='090825'){login.classList.remove('active');main.classList.add('active')}else err.textContent='Wrong password';}
+no.onmouseover=()=>{no.style.position='absolute';no.style.left=Math.random()*80+'vw';no.style.top=Math.random()*80+'vh';}
+function showBalloons(){balloons.style.display='block'}
+function wish(el,msg){alert(msg);el.style.visibility='hidden';if([...document.querySelectorAll('.balloon')].every(b=>b.style.visibility==='hidden'))cake.style.display='block';}
+function blow(){cake.innerHTML='<h2>🎉 Happy Birthday! 🎂</h2>';letter.style.display='block';}
+</script>
+</body></html>
