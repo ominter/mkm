@@ -36,8 +36,8 @@ header{
   position:relative;padding:50px 0;
 }
 .hero{
-  display:grid;grid-template-columns:1.25fr .75fr;gap:25px;
-  align-items:center;width:100%;
+  display:block;
+  width:100%;
 }
 .hero-card,.panel,.section-card{
   border:1px solid #8e2948;
@@ -71,8 +71,7 @@ h1{font-size:clamp(50px,7vw,95px);line-height:.9;margin:20px 0 15px;color:#fff}
   border:1px solid #8e2948;
 }
 .cover-art .caption{padding:25px;text-align:center;font-size:25px}
-.side{padding:25px}
-.side h2,.section-title{color:#ff8aaa;text-align:center;font-size:26px;margin:5px 0 20px}
+.section-title{color:#ff8aaa;text-align:center;font-size:26px;margin:5px 0 20px}
 .inside-item{
   display:flex;gap:15px;align-items:center;padding:15px 8px;
   border-bottom:1px solid #612139
@@ -130,7 +129,6 @@ section{padding:35px 0}
   background:radial-gradient(circle,rgba(255,38,100,.22),transparent 60%);
 }
 .love h2{font-size:clamp(45px,7vw,80px);margin:0}
-.tips{padding:25px}
 footer{text-align:center;padding:35px;border-top:1px solid #6e2540;color:#ff8eaa;font-size:22px}
 #surprise{display:none}
 #surprise.show{display:block;animation:fade .8s ease}
@@ -148,7 +146,7 @@ footer{text-align:center;padding:35px;border-top:1px solid #6e2540;color:#ff8eaa
 }
 @media(max-width:500px){
  .gallery{grid-template-columns:1fr}
- .hero-card,.side{padding:20px}
+ .hero-card{padding:20px}
  h1{font-size:48px}
  .fireworks h2{font-size:40px}
 }
@@ -167,16 +165,7 @@ footer{text-align:center;padding:35px;border-top:1px solid #6e2540;color:#ff8eaa
     <a class="btn" href="#surprise" onclick="openSurprise()">Open Your Surprise ♡</a>
   </div>
 
-  <div class="side panel">
-    <h2>💗 What's Inside? 💗</h2>
-    <div class="inside-item"><div class="icon">📸</div><div><b>15 Photo Gallery</b><small>Our beautiful memories</small></div></div>
-    <div class="inside-item"><div class="icon">👩🏻‍❤️‍👨🏻</div><div><b>Cute Couples Stickers</b><small>Lots of love & cuteness</small></div></div>
-    <div class="inside-item"><div class="icon">💌</div><div><b>Love Letter</b><small>A special letter for you</small></div></div>
-    <div class="inside-item"><div class="icon">🎂</div><div><b>Birthday Cake</b><small>Blow the candles</small></div></div>
-    <div class="inside-item"><div class="icon">🚘</div><div><b>Car Love Section</b><small>For my car lover</small></div></div>
-    <div class="inside-item"><div class="icon">🎆</div><div><b>Fireworks Surprise</b><small>A grand surprise for you</small></div></div>
-    <div class="inside-item"><div class="icon">🎵</div><div><b>Background Music</b><small>Romantic love song</small></div></div>
-  </div>
+
 </div>
 </header>
 
@@ -210,16 +199,7 @@ footer{text-align:center;padding:35px;border-top:1px solid #6e2540;color:#ff8eaa
 </div>
 </section>
 
-<section>
-<div class="container">
-<h2 class="section-title">🚘 Car Love Section 🚘</h2>
-<div class="section-card" style="padding:35px;text-align:center">
-  <div class="cover-art" style="min-height:360px;background-image:linear-gradient(180deg,transparent 45%,rgba(0,0,0,.9)),url('photo5.jpg')">
-    <div class="caption">Life is a beautiful ride,<br>when I have you by my side. ❤️</div>
-  </div>
-</div>
-</div>
-</section>
+
 
 <section>
 <div class="container">
@@ -256,16 +236,7 @@ footer{text-align:center;padding:35px;border-top:1px solid #6e2540;color:#ff8eaa
 </div>
 </section>
 
-<section>
-<div class="container panel tips">
-<h2 class="section-title">💗 Extra Tips 💗</h2>
-<ul style="line-height:2;font-size:17px">
-<li>Keep Internet ON for the best experience.</li>
-<li>Use earphones for a better music feel.</li>
-<li>Works perfectly on Mobile, Tablet and Laptop.</li>
-</ul>
-</div>
-</section>
+
 </main>
 
 <footer>〰️ ❤️ Made With Love By Mannu For Manjeet Lamba ❤️ 〰️</footer>
